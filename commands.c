@@ -346,7 +346,7 @@ void commands_process_packet(unsigned char *data, unsigned int len,
 		}
 		if (mask & ((uint32_t)1 << 9)) {
 			//buffer_append_float32(send_buffer, mc_interface_get_amp_hours(false), 1e4, &ind);
-			buffer_append_float32(send_buffer, mc_interface_get_rpm_fast	(), 1e1, &ind);
+			buffer_append_float32(send_buffer, mc_interface_get_rpm_fast	(), 1e0, &ind);
 		}
 		if (mask & ((uint32_t)1 << 10)) {
 			buffer_append_float32(send_buffer, mc_interface_get_amp_hours_charged(false), 1e4, &ind);
